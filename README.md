@@ -1,6 +1,7 @@
 # djsl
 
 > pc and mobile project
+>vue+vux+element
 
 ## Build Setup
 
