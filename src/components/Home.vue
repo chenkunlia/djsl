@@ -5,6 +5,7 @@
       <cell title="title" value="value"></cell>
     </group>
   </div>
+  
 </template>
 
 <script>
