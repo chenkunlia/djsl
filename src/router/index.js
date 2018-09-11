@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import Demo from '@/components/Demo'
 // import Demo from '@/components/Demo'
-import Home from '@/components/Home'
+// import Home from '@/components/Home'
 // import { resolve } from 'dns'
 
 /* const cp = function (url) {
@@ -11,6 +11,7 @@ import Home from '@/components/Home'
   })
 } */
 Vue.use(Router)
+const cp = (r, url) => { return require.ensure([], () => r(require('@/components/page' + url)), 'index') }
 
 export default new Router({
   mode: 'history',
@@ -18,7 +19,7 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: r => cp(r, '/admin/Home')
     }
   ]
 })
