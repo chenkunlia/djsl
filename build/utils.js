@@ -3,7 +3,9 @@ const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const packageConfig = require('../package.json')
-
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -20,6 +22,7 @@ exports.cssLoaders = function (options) {
     options: {
       sourceMap: options.sourceMap
     }
+    // include:[resolve('src'),resolve('node_modules/element-ui/lib/')]
   }
 
   const postcssLoader = {
@@ -38,7 +41,7 @@ exports.cssLoaders = function (options) {
         loader: loader + '-loader',
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap
-        })
+        })       
       })
     }
 
