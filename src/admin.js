@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 // import VueRouter from 'vue-router'
-import router from './router/admin'
+import router from './router/admin.router'
 // import router from './router'
 import ElementUI from 'element-ui'
 
