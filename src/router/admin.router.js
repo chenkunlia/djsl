@@ -6,6 +6,7 @@ const cp = (r, url) => { return require.ensure([], () => r(require('@/views' + u
 const _router = [
   {path: '', name: 'admin', component: r => cp(r, '/admin/Demo')},
   {path: '/admin', name: 'index', component: r => cp(r, '/admin/Demo')},
+  {path: '/admin/login', name: 'login', component: r => cp(r, '/admin/login/Login')},
   {path: '/admin/home', name: 'home', component: r => cp(r, '/admin/Home')}
 ]
 
