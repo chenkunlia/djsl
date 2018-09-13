@@ -23,8 +23,7 @@ const createLintingRule = () => ({
 const webpackConfig ={
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/admin/admin.js',
-    mobile:'./src/mobile/admin.js'
+    app: './src/admin/admin.js'   
   },
   output: {
     path: config.build.assetsRoot,
