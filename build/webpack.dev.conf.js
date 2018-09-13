@@ -24,8 +24,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devServer: {
     clientLogLevel: 'warning',
     historyApiFallback: {
-      rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+      rewrites: [ 
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },        
       ],
     },
     hot: true,
@@ -55,14 +55,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      chunks:['app']
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'mobile.html',
-    //   template: 'mobile.html',
-    //   inject: true,
-    //   chunks:['mobile']
-    // }),
+    new HtmlWebpackPlugin({
+      filename: 'mobile.html',
+      template: 'mobile.html',
+      inject: true,
+      chunks:['mobile']
+    }),
     // copy custom static assets
     new CopyWebpackPlugin([
       {
