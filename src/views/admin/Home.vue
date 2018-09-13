@@ -5,19 +5,20 @@
       <cell title="title" value="value"></cell>
     </group>
   </div>
+  
 </template>
 
 <script>
 import { Cell, Group } from 'vux'
 export default {
-  name: 'Demo',
+  name: 'Home',
   components: {
       Cell,
       Group
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your home App'
     }
   }
 }
