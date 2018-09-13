@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-   <h3>{{ msg }}</h3>
+   <h3>{{ msg }}admin</h3>
    <div class="block">
     <span class="demonstration">默认</span>
     <el-date-picker
