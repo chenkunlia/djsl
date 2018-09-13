@@ -14,4 +14,5 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: _router
+  // base: process.env.NODE_ENV === 'production' ? '/' : '/admin/'
 })
